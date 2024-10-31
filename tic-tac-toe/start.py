@@ -1,23 +1,12 @@
-"""This is a minimal example to show how to use Tianshou with a PettingZoo environment. No training of agents is done here.
-
-Author: Will (https://github.com/WillDudley)
-
-Python version used: 3.8.10
-
-Requirements:
-pettingzoo == 1.22.0
-git+https://github.com/thu-ml/tianshou
-"""
-
 from tianshou.data import Collector
 from tianshou.env import DummyVectorEnv, PettingZooEnv
 from tianshou.policy import MultiAgentPolicyManager, RandomPolicy
 
-from pettingzoo.classic import chess_v6
+from pettingzoo.classic import tictactoe_v3
 
 if __name__ == "__main__":
     # Step 1: Load the PettingZoo environment
-    env = chess_v6.env(render_mode="human")
+    env = tictactoe_v3.env(render_mode="human")
 
     # Step 2: Wrap the environment for Tianshou interfacing
     env = PettingZooEnv(env)

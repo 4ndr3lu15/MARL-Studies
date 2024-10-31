@@ -1,1 +1,6 @@
 /~
+
+# Ignore pycache
+**/__pycache__/
+
+tianshou/
